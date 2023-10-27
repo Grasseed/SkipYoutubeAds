@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Skip YouTube Ads",
+    "version": "1.0",
+    "description": "Automatically skips YouTube ads.",
+    "permissions": ["activeTab", "tabs"],
+    "icons": {
+      "48": "Skip.png"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "Skip.png",
+        "48": "Skip.png",
+        "128": "Skip.png"
+      }
+    },
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["content.js"]
+        }
+      ]
+  }
+  
